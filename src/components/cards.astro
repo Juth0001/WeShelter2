@@ -1,0 +1,59 @@
+---
+const { img, overtekst, undertekst, tekst, btn_tekst } = Astro.props;
+---
+
+<article class="1">
+  <section class="content-1">
+    <h2>{overtekst}</h2>
+    <div class="right">
+      <p>{tekst}</p>
+    </div>
+
+    <div class="left">
+      <div>
+        <img src={img} alt="" />
+        <p>{tekst}</p>
+      </div>
+      <div>
+        <img src={img} alt="" />
+        <p>{tekst}</p>
+      </div>
+      <div>
+        <img src={img} alt="" />
+        <p>{tekst}</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<article class="2">
+  <section class="content-2">
+    <h2>{overtekst}</h2>
+    <h3>{undertekst}</h3>
+    <div class="right">
+      <p>{tekst}</p>
+      <button>{btn_tekst}</button>
+    </div>
+
+    <div class="left">
+      <div><img src={img} alt="" /></div>
+    </div>
+  </section>
+</article>
+
+<article class="3">
+  <section class="content-3">
+    <h2>{overtekst}</h2>
+    <h3>{undertekst}</h3>
+    <div class="right">
+      <p>{tekst}</p>
+    </div>
+
+    <div class="left">
+      <div>
+        <p>{tekst}</p>
+        <button>{btn_tekst}</button>
+      </div>
+    </div>
+  </section>
+</article>
