@@ -1,7 +1,7 @@
 ---
-import Cards from "../components/cards.astro";
-import Welcome from "../components/cards.astro";
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import FaktaBox from "../components/FaktaBox.astro";
 ---
 
 <Layout>
@@ -59,111 +59,719 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <section class="article-1">
-      <Cards
-        overtekst="TAK FOR DIG"
-        tekst="Vær med til at hjælpe mennesker og være en del af et stærkt fællesskab. Uanset om du har et par timer om måneden eller om ugen, er der plads til dig. 
-		Vi tror på, at frivillige kan noget ganske særligt. For os er frivillighed et redskab, der bidrager med nytænkning, kreativitet og frie rum, hvor  brugere og frivillige mødes som medborgere og ikke som klient og  professionel.  
-		Som frivillig er du med at skabe nye sociale fællesskaber, vise vejen til et mere indholdsrigt liv og bryde den ensomhed, der ofte følger med, når man er hjemløs."
-        img="/stærk_arm.svg"
-      />
-      <section></section>
+    <section class="tak_for_dig">
+      <h2>TAK FOR DIG</h2>
+      <div class="left">
+        <p>
+          Vær med til at hjælpe mennesker og være en del af et stærkt
+          fællesskab. Uanset om du har et par timer om måneden eller om ugen, er
+          der plads til dig. Vi tror på, at frivillige kan noget ganske særligt.
+          For os er frivillighed et redskab, der bidrager med nytænkning,
+          kreativitet og frie rum, hvor brugere og frivillige mødes som
+          medborgere og ikke som klient og professionel. Som frivillig er du med
+          at skabe nye sociale fællesskaber, vise vejen til et mere indholdsrigt
+          liv og bryde den ensomhed, der ofte følger med, når man er hjemløs.
+        </p>
+      </div>
+      <div class="right">
+        <div class="_1">
+          <img src="/stærk_arm.svg" alt="icon" />
+          <p>
+            Styrke sundheden hos beboere på vores herberger og brugere af vores
+            væresteder
+          </p>
+        </div>
+        <div class="_2">
+          <img src="/penge.svg" alt="icon" />
+          <p>
+            Løse de økonomiske problemer, der spænder ben for manges vej ud af
+            hjemløshed.
+          </p>
+        </div>
+        <div class="_3">
+          <img src="/gruppe.svg" alt="icon" />
+          <p>Modvirke ensomhed blandt socialt udsatte og hjemløse</p>
+        </div>
+      </div>
     </section>
 
-    <style>
-      /*header*/
-      .logo img {
-        height: 100px;
-      }
-      .header {
-        background-color: #ffffff;
-        padding: 1rem;
-      }
-      .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .nav .menu {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-        margin: 0;
-        padding: 0;
-      }
-      .dropdown {
-        position: relative;
-      }
-      .dropbtn {
-        background: none;
-        color: #333333;
-        border: none;
-      }
-      .støtte-btn {
-        background: #810b0b;
-        color: #ffffff;
-        border: none;
-      }
-      .dropbtn:hover {
-        background: none;
-        color: #333333;
-        border: none;
-        font-size: 1rem;
-      }
-      .dropdown_content {
-        display: none;
-        position: absolute;
-        background-color: #ffffff;
-        min-width: 160px;
-        z-index: 1;
-        flex-direction: column;
-      }
-      .dropdown_content a {
-        color: #333333;
-        padding: 0.5rem 1rem;
-        text-decoration: none;
-        display: block;
-      }
-      .dropdown:hover .dropdown_content {
-        display: flex;
-      }
-      .dropdown_content a:hover {
-        background-color: #ffffff;
-      }
+    <div class="frivillig_section">
+      <img src="/frivillig_køkken.png" alt="madlavnings aktivitet" />
 
-      /*herosection*/
-      .hero-section {
-        position: relative;
-        background-image: url("../public/hero.png");
-        background-size: contain; /* Sørger for, at billedet dækker hele området */
-        background-position: center; /* Centrerer billedet */
-        background-repeat: no-repeat;
-        height: 80vh;
-        margin: 0;
-        padding: 0;
-      }
-      .hero-content {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #ffffff;
-        text-align: center;
-        padding: 20px;
-        z-index: 1;
-      }
-      .hero-content h1 {
-        font-size: 5rem;
-        margin: 0;
-        padding: 0;
-      }
-      .hero-content h2 {
-        font-size: 3.5rem;
-        margin: 0;
-        padding: 0;
-      }
+      <div class="frivillig_person">
+        <h3>Miriam 55år - Frivillig i 1 år</h3>
+        <p class="quote">
+          “ Det har været fantastisk at starte som frivillig på bostedet, jeg
+          kan bruge min erfaring som kok til at inspirere og bidrage til et
+          fælleskab i køkkenet og i huset ”
+        </p>
+        <p class="quote">“Man får meget mere igen end det man giver”</p>
+      </div>
 
-      /**/
-    </style>
+      <div class="modtager-quote">
+        <p><strong>Kim 55år – WeShelter gæst</strong></p>
+        <p>
+          “De frivillige jeg har mødt gennem tiden vil jeg aldrig glemme, især
+          mine kontaktperson som selv har levet på gaden har jeg haft stor
+          støtte af”
+        </p>
+      </div>
+    </div>
+
+    <section class="aktivitets_card">
+      <h2>AKTIVITETER HVOR DU KAN BIDRAGE</h2>
+      <div class="cards">
+        <Card
+          aktivitet="AKTIVITETS KLUB FOR UNGE"
+          image="/img_1.png"
+          beskrivelse="Quisque enim. tincidunt id ac Nunc Praesent eu vehicula, lacus non gravida Ut Lorem Sed non, tincidunt Donec elementum Ut cursus commodo risus tincidunt Donec "
+          læs_mere="Læs Mere"
+        />
+        <Card
+          aktivitet="RUSMIDDELBEHANDLINGENS AKTIVITETSKLUBBER"
+          image="/img_2.png"
+          beskrivelse="Quisque enim. tincidunt id ac Nunc Praesent eu vehicula, lacus non gravida Ut Lorem Sed non, tincidunt Donec elementum Ut cursus commodo risus tincidunt Donec "
+          læs_mere="Læs Mere"
+        />
+        <Card
+          aktivitet="FRIVILLIG I MADKLUB UNDER ÅBEN HIMMEL"
+          image="/img_3.png"
+          beskrivelse="Quisque enim. tincidunt id ac Nunc Praesent eu vehicula, lacus non gravida Ut Lorem Sed non, tincidunt Donec elementum Ut cursus commodo risus tincidunt Donec "
+          læs_mere="Læs Mere"
+        />
+        <Card
+          aktivitet="FRIVILLIG I MADKLUB UNDER ÅBEN HIMMEL"
+          image="/img_2.png"
+          beskrivelse="Quisque enim. tincidunt id ac Nunc Praesent eu vehicula, lacus non gravida Ut Lorem Sed non, tincidunt Donec elementum Ut cursus commodo risus tincidunt Donec "
+          læs_mere="Læs Mere"
+        />
+        <Card
+          aktivitet="AKTIVITETS KLUB FOR UNGE"
+          image="/img_3.png"
+          beskrivelse="Quisque enim. tincidunt id ac Nunc Praesent eu vehicula, lacus non gravida Ut Lorem Sed non, tincidunt Donec elementum Ut cursus commodo risus tincidunt Donec "
+          læs_mere="Læs Mere"
+        />
+        <Card
+          aktivitet="RUSMIDDELBEHANDLINGENS AKTIVITETSKLUBBER"
+          image="/img_1.png"
+          beskrivelse="Quisque enim. tincidunt id ac Nunc Praesent eu vehicula, lacus non gravida Ut Lorem Sed non, tincidunt Donec elementum Ut cursus commodo risus tincidunt Donec "
+          læs_mere="Læs Mere"
+        />
+      </div>
+    </section>
+
+    <section class="process">
+      <h2>FRIVILLIGT ARBEJDE</h2>
+      <h3>Hvordan foregår det?</h3>
+      <div class="grid">
+        <div class="left">
+          <p>
+            Hvad får du som frivillig i WeShelter? Vi kan tilbyde udfordrende og
+            spændende frivilligt arbejde, der gør en forskel for nogle af
+            Danmarks mest udsatte borgere. Du bliver altid grundigt klædt på til
+            opgaven, når du er frivillig i WeShelter. Vi sørger for en
+            grundig indføring i din rolle, løbende sparring, mulighed for
+            udvikling og kurser, events og oplæg, der gør dig klogere på
+            målgruppen og på at være frivillig.
+          </p>
+          <p>
+            at volutpat quam sed ex. quam Ut lobortis, Nunc ac elit elit sit sit
+            risus elit Nunc placerat. sed quam dui nec tincidunt ipsum faucibus
+            vehicula, turpis vel
+          </p>
+          <p>
+            eget dui. id leo. dignissim, odio ipsum ac sodales. felis, libero,
+            Quisque fringilla Nullam nibh non at efficitur. libero, facilisis
+            odio In porta ultrices ex
+          </p>
+          <p>
+            nisi cursus maximus non. cursus placerat sollicitudin. dui.
+            dignissim, elementum Praesent libero, Nunc non lobortis, vitae sit
+            ullamcorper nibh lacus quis id
+          </p>
+        </div>
+        <div class="right">
+          <div class="tidslinje">
+            <img src="/tidslinje.svg" alt="icon" />
+          </div>
+          <button>TILMELD DIG</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="frivillig_2_section">
+        <img src="/frivillig_ai.png" alt="Diana" />
+
+        <div class="frivillig_2_person">
+          <h2>MØD EN FRIVILLIG</h2>
+          <p>Diana Westmark - 31år</p>
+          <p>Frivillig i 2 år på ungeherberg</p>
+
+          <p>
+            “Det er sjovt og socialt meningsfuldt arbejde jeg har lavet, elsker
+            at lære nye folk at kende. Udvide ens horisont.  Det er utrolig
+            givende at hjælpe med at kunne åbne op for de unges ressourcer, hvor
+            de selv bliver positive overrasket.
+          </p>
+
+          <p>
+            Det er fantastisk at lave noget der rækker ud over mig selv, at
+            arbejde med skønne mennesker .
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="for_frivillige">
+      <h2>FYRAFTENSMØDER</h2>
+      <h3>Kurser og event for frivillige</h3>
+      <div class="for_frivillige_grid">
+        <div class="for_frivillige_left">
+          <p>
+            Som frivillig er du med til at gøre en forskel, og vi vil gerne give
+            dig mulighed for at blive endnu mere inspireret, engageret og klædt
+            på til dit vigtige arbejde. Derfor inviterer vi dig til en række
+            spændende arrangementer, der ikke kun styrker dine kompetencer, men
+            også giver dig mulighed for at møde andre ildsjæle og udvide dit
+            netværk.
+          </p>
+        </div>
+        <div class="for_frivillige_right">
+          <p>
+            Hold øje med vores kommende arrangementer og sæt allerede nu kryds i
+            kalenderen. Sammen skaber vi positive forandringer – og vi kan ikke
+            gøre det uden dig.
+          </p>
+          <button>LÆS MERE</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="fakta">
+      <h2>SÅDAN GIK DET I 2024</h2>
+      <div class="fakta_box">
+        <FaktaBox tal="1,000K+ " beskrivelse="Members wordwide" />
+        <FaktaBox tal="1.278  " beskrivelse="varme måltider" />
+        <FaktaBox tal="1.327  " beskrivelse="Overnatning på vores herberg" />
+        <FaktaBox
+          tal="300+"
+          beskrivelse="frivillig i vores 16 aktiviter og indsatser"
+        />
+      </div>
+      <div class="btn">
+        <button>GIV DIN STØTTE</button>
+        <button>TILMELD DIG</button>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <section class="footer">
+      <div class="om">
+        <ul>
+          <li>
+            <a href="https://weshelter.dk/om-os/"
+              ><strong>Om WeShelter</strong></a
+            >
+          </li>
+          <li>
+            <a href="https://weshelter.dk/om-os/om-weshelter/">Organisation</a>
+          </li>
+          <li>
+            <a href="https://weshelter.dk/om-os/ledige-stillinger/"
+              >Ledige Stillinger</a
+            >
+          </li>
+          <li>
+            <a href="https://weshelter.dk/om-os/frivilligindsatsen/"
+              >Frivillig Indsatsen</a
+            >
+          </li>
+          <li>
+            <a href="https://weshelter.dk/om-os/historie/"
+              >Historisk Tidslinje</a
+            >
+          </li>
+          <li>
+            <a href="https://weshelter.dk/om-os/udgivelser/">Publikationer</a>
+            <li>
+              <a href="https://weshelter.dk/om-os/udgivelser/frivillighed/"
+                >Frivillighed</a
+              >
+            </li>
+            <li>
+              <a href="https://weshelter.dk/vores-arbejde/magasinet-hjemloes/"
+                >Magasinet Hjemløs</a
+              >
+            </li>
+            <li>
+              <a href="https://weshelter.dk/tilmeldnyhedsbrev/">Nyhedsbrev</a>
+            </li>
+          </li>
+          <li>
+            <a href="https://weshelter.dk/om-os/bestyrelser/">Bestyrelser</a>
+          </li>
+          <li>
+            <a href="https://weshelter.dk/om-os/strategi2021-2025/"
+              >Stretegi 2021-2025</a
+            >
+          </li>
+          <li>
+            <a href="https://weshelter.dk/?page_id=3611">Viden Om Hjemløshed</a>
+          </li>
+          <li><a href="https://weshelter.dk/om-os/kontakt/">Kontakt</a></li>
+          <li>
+            <a href="https://weshelter.dk/om-os/dokumenter/"
+              >Vedtægter, Årsregnskaber, Akkrediteringer</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://weshelter.dk/wp-content/uploads/2019/02/2018-juli-persondatapolitik.pdf"
+              >Persondatapolitik</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="vores_arbejde">
+        <p><strong>HERBERGER</strong></p>
+        <ul>
+          <li>
+            <a href="https://weshelter.dk/projekt/kollegiet-gl-koege-landevej/"
+              >Kollegiet Gl. Køge Landevej</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://weshelter.dk/projekt/sporsloejfen-herberg-for-unge/"
+              >Ungeherberget Sporsløjfen</a
+            >
+          </li>
+        </ul>
+        <p><strong>AKTIVITETS OG SAMVÆRS TILBUD</strong></p>
+        <ul>
+          <li>
+            <a href="https://weshelter.dk/projekt/nabo-center/"
+              >NABO Center Amager</a
+            >
+          </li>
+          <li>
+            <a href="https://weshelter.dk/projekt/offsides-sociale-haver/"
+              >Offsides Sociale Haver</a
+            >
+          </li>
+          <li>
+            <a href="https://weshelter.dk/projekt/pegasus/">Pegasus</a>
+          </li>
+        </ul>
+      </div>
+      <div class="detaljer">
+        <h1><strong>WeShelter</strong></h1>
+        <p>Slotsgade 2, 1. sal Adresse:2200 København N</p>
+        <p>kontakt@weshelter.dk</p>
+        <p>+45 36 16 11 13</p>
+        <p>Cvr. 80968515</p>
+      </div>
+    </section>
+    <section class="copyright">
+      Copyright © 2025 Fonden Missionen blandt Hjemløse
+    </section>
+  </footer>
 </Layout>
+
+<style>
+  /*header*/
+  .logo img {
+    height: 100px;
+  }
+  .header {
+    background-color: #ffffff;
+    padding: 1rem;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropbtn {
+    background: none;
+    color: #333333;
+    border: none;
+  }
+  .støtte-btn {
+    background: #810b0b;
+    color: #ffffff;
+    border: none;
+    font-size: 1.2rem;
+  }
+  .dropbtn:hover {
+    background: none;
+    color: #333333;
+    border: none;
+    font-size: 1rem;
+  }
+  .dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    z-index: 1;
+    flex-direction: column;
+  }
+  .dropdown_content a {
+    color: #333333;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown:hover .dropdown_content {
+    display: flex;
+  }
+  .dropdown_content a:hover {
+    background-color: #ffffff;
+  }
+
+  /*herosection*/
+  .hero-section {
+    position: relative;
+    background-image: url("/hero.png");
+    background-size: contain; /* Sørger for, at billedet dækker hele området */
+    background-position: center; /* Centrerer billedet */
+    background-repeat: no-repeat;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-content {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+  }
+  .hero-content h1 {
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-content h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*Main section 1*/
+  .tak_for_dig {
+    background-color: #f1f6f8;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    padding: 3rem;
+  }
+  .tak_for_dig h2 {
+    padding-left: 1rem;
+    font-size: 3rem;
+  }
+  .left {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 1rem;
+    padding-right: 5rem;
+    line-height: 1.8;
+  }
+  .right {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 1rem;
+  }
+  .right {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3;
+  }
+  ._1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  ._2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  ._3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  /* section udtalelser*/
+  .frivillig_section {
+    position: relative;
+    display: flex;
+    margin-top: 8%;
+  }
+  .frivillig_section img {
+    width: 400px;
+    position: relative;
+    margin-top: 100px;
+    left: 15%;
+    padding: 20px;
+    z-index: 1;
+  }
+  .frivillig_person {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 10%;
+    left: 40%;
+    background-color: #232cd5;
+    color: white;
+    width: 600px;
+    height: 500px;
+    padding: 150px;
+    box-sizing: border-box;
+  }
+  .frivillig_person h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  .frivillig_person p {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  .quote {
+    margin-top: 240px; /* Skub det ned under billedet */
+    max-width: 500px;
+  }
+  .modtager-quote {
+    position: absolute;
+    margin-top: 30%;
+    left: 15%;
+    max-width: 350px;
+  }
+  /*aktivitets section*/
+  .aktivitets_card {
+    margin-top: 10%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+  }
+  .aktivitets_card h2 {
+    position: relative;
+    text-align: center;
+    padding-top: 10%;
+    font-size: 3rem;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10%;
+    margin: 20px;
+  }
+  /*tidslinje*/
+  .process {
+    background-color: #f1f6f8;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    padding-top: 3rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    margin-top: 1.5rem;
+    margin-right: 5rem;
+    margin-left: 2rem;
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1.5rem;
+    padding-left: 3rem;
+  }
+  .grid img {
+    height: 70%;
+    margin-left: 15rem;
+  }
+  .process h2,
+  .process h3 {
+    position: relative;
+    text-align: center;
+  }
+  .process h2 {
+    font-size: 3rem;
+  }
+  .process h3 {
+    font-size: 2rem;
+  }
+  .left {
+    grid-column: 1/2;
+
+    padding-right: 5rem;
+    line-height: 1.8;
+  }
+  .right {
+    grid-column: 2/3;
+    padding-left: 1rem;
+  }
+  .process button {
+    background-color: #810b0b;
+    color: white;
+    border: none;
+    width: 150px;
+    font-size: 1.5rem;
+  }
+  /*mød en frivillig*/
+  .frivillig_2_section {
+    position: relative;
+    display: flex;
+  }
+  .frivillig_2_section img {
+    width: 400px;
+    position: relative;
+    margin-top: 100px;
+    left: 55%;
+    padding: 20px;
+    z-index: 1;
+  }
+  .frivillig_2_person {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 10%;
+    left: 20%;
+    background-color: #232cd5;
+    color: white;
+    width: 600px;
+    height: auto;
+    box-sizing: border-box;
+    padding-top: 10%;
+    padding-right: 150px;
+    padding-bottom: 10%;
+    padding-left: 150px;
+  }
+  .frivillig_2_person h2 {
+    margin-top: 0;
+    font-size: 28px;
+  }
+  .frivillig_2_person p {
+    line-height: 1.5;
+  }
+  /*kurser og events*/
+  .for_frivillige {
+    background-color: #f1f6f8;
+    margin-top: 25rem;
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+    padding-bottom: 5rem;
+  }
+  .for_frivillige_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+  }
+  .for_frivillige h2 {
+    position: relative;
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 3rem;
+  }
+  h3 {
+    position: relative;
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+  }
+  .for_frivillige_left {
+    grid-column: 1/2;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    line-height: 1.8;
+  }
+  .for_frivillige_right {
+    grid-column: 2/3;
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+  .for_frivillige_right button {
+    background-color: #171ea0;
+    color: white;
+    border: none;
+    width: auto;
+    font-size: 1.5rem;
+  }
+
+  /*fakta_box*/
+  .fakta h2 {
+    position: relative;
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 3rem;
+  }
+  .fakta_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    margin: 20px;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .fakta button {
+    background-color: #810b0b;
+    color: white;
+    border: none;
+    width: auto;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  /*footer*/
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #f1f6f8;
+  }
+  .om {
+    padding: 6rem;
+  }
+  .vores_arbejde {
+    padding: 6rem;
+  }
+  .detaljer {
+    padding: 4rem;
+  }
+  .detaljer h1 {
+    font-size: 3rem;
+    color: #232cd5;
+  }
+  .copyright {
+    padding: 3rem;
+  }
+</style>

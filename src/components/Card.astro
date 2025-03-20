@@ -1,0 +1,29 @@
+---
+const { aktivitet, image, beskrivelse, læs_mere } = Astro.props;
+---
+
+<article>
+  <h4><strong>{aktivitet}</strong></h4>
+  <img src={image} alt="" />
+  <p>{beskrivelse}</p>
+  <button>{læs_mere}</button>
+</article>
+
+<style>
+  article {
+    position: relative;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  button {
+    background-color: #232cd5;
+    color: white;
+    border: none;
+    font-size: 1.3rem;
+  }
+</style>
