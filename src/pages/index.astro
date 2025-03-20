@@ -16,7 +16,7 @@ import Layout from "../layouts/Layout.astro";
       <ul class="menu">
         <li class="dropdown">
           <button class="dropbtn">Er du hjemløs?</button>
-          <div class="dropdown-content">
+          <div class="dropdown_content">
             <a href="#">Få hjælp til bolig</a>
             <a href="#">Få hjælp til jobsøgning</a>
             <a href="#">- - -</a>
@@ -24,7 +24,7 @@ import Layout from "../layouts/Layout.astro";
         </li>
         <li class="dropdown">
           <button class="dropbtn">Bliv Frivillig</button>
-          <div class="dropdown-content">
+          <div class="dropdown_content">
             <a href="#">Bliv frivillig støtte person</a>
             <a href="#">Bliv frivillig aktivitets udøver</a>
             <a href="#">Bliv frivillig</a>
@@ -32,7 +32,7 @@ import Layout from "../layouts/Layout.astro";
         </li>
         <li class="dropdown">
           <button class="dropbtn">Vores arbejde</button>
-          <div class="dropdown-content">
+          <div class="dropdown_content">
             <a href="#">- - -</a>
             <a href="#">- - -</a>
             <a href="#">- - -</a>
@@ -40,7 +40,7 @@ import Layout from "../layouts/Layout.astro";
         </li>
         <li class="dropdown">
           <button class="dropbtn">Muligheder for støtte</button>
-          <div class="dropdown-content">
+          <div class="dropdown_content">
             <a href="#">Bidrag økonomisk</a>
             <a href="#">Doner tøj</a>
             <a href="#">Bliv frivillig</a>
@@ -116,7 +116,7 @@ import Layout from "../layouts/Layout.astro";
           border: none;
           font-size: 1rem;
         }
-        .dropdown-content {
+        .dropdown_content {
           display: none;
           position: absolute;
           background-color: #ffffff;
@@ -124,16 +124,16 @@ import Layout from "../layouts/Layout.astro";
           z-index: 1;
           flex-direction: column;
         }
-        .dropdown-content a {
+        .dropdown_content a {
           color: #333333;
           padding: 0.5rem 1rem;
           text-decoration: none;
           display: block;
         }
-        .dropdown:hover .dropdown-content {
+        .dropdown:hover .dropdown_content {
           display: flex;
         }
-        .dropdown-content a:hover {
+        .dropdown_content a:hover {
           background-color: #ffffff;
         }
 
